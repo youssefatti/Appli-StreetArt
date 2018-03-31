@@ -7,30 +7,31 @@ import {
   StyleSheet
 } from "react-native";
 
-// import Picture from "../Picture/Picture";
+import Picture from "../Picture/Picture";
 
 export default class Home extends React.Component {
   // static navigationOptions = {
   //   header: null
   // };
 
-  // renderPicture() {
-  //   return <Picture />;
-  // }
+  renderPicture() {
+    return <Picture />;
+  }
 
   render() {
     const { navigate } = this.props.navigation;
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
         <StatusBar barStyle="dark-content" />
-        {/* <TouchableOpacity
+        <TouchableOpacity
           onPress={() => {
             navigate("Picture", { navigation: this.props.navigation });
             this.renderPicture.bind(this);
+            alert("click");
           }}
         >
-      </TouchableOpacity> */}
-        <Text>Welcome home page</Text>
+          <Text>Welcome home page</Text>
+        </TouchableOpacity>
       </View>
     );
   }
